@@ -30,7 +30,28 @@
   <p class="margin">   </p>
 <img src="finaldemo2.jpg" alt="Flowers in Chania"  width="500" />
    <p class="margin">   </p>
+  <div style="flex: 1; min-width: 300px; max-width: 500px; margin: auto;">
+  <iframe
+    id="ytplayer"
+    width="100%"
+    style="aspect-ratio: 16 / 9; border: none;"
+    src="https://www.youtube.com/embed/aZ9CSFb-bu0?autoplay=0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+  <h6 style="margin-top: 5px; font-style: italic;">
+    Here's my video
+  </h6>
+</div>
 
+<script>
+  const iframe = document.getElementById('ytplayer');
+  iframe.addEventListener('click', function () {
+    iframe.src = "https://www.youtube.com/embed/aZ9CSFb-bu0?autoplay=1";
+  });
+</script>
+
+ <p class="margin">   </p>
 <h4> As someone who loves playing card games with friends, I always struggled with one thing -- shuffling. I was awful at it and at the beginning of the program, nobody in my group knew how to shuffle cards. Every game we played was a struggle and took extremely long to begin due to shuffling. Therefore, I wanted to take the situation in my own hands and create an automatic shuffler. I've seen inspiration online, but most machines cost a decent amount so why not make it myself? </h4>
 <p class="margin"></p> <!-- empty margin paragraph -->
 
@@ -352,7 +373,7 @@ After assembling the base shuffler build, I had to debug some of the issues that
 <h4> After combining all these functions, I was able to get the project to work! The shuffling worked wonderfully as well as the distribution, and I was officially done. </h4>
   <div style="flex: 1; min-width: 250px; max-width: 300px;">
     <video controls style="width: 100%; height: auto;">
-      <source src="fullworking.MOV" type="video/quicktime">
+      <source src="fullworking.mov" type="video/quicktime">
       Your browser does not support the video tag.
     </video>
     <h6 style="margin-top: 5px; font-style: italic;">
