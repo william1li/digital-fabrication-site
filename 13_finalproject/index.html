@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>PS70: Intro to Digital Fabrication </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+
+
+<nav class="navbar navbar-expand-sm navbar-dark" style=" color: #EEE7E8;">
+  <div style="align-items: center; justify-content: center;" class="container-fluid">
+    <div class="flexrow">
+      <h2 class="nav-title">Digital Fabrication 2025</h2>
+    </div>
+    <div class="navbar-nav">
+      <h4><a class="nav-link" href="../index.html">Home</a></h4>
+      <h4><a class="nav-link" href="../about.html">About</a></h4>
+    </div>
+  </div>
+</nav>
+
+<body>
+<xmp style="display:none;">
+<div class="textcontainer">
+<p class="margin"></p>
+
+<h3>Week 10</h3>
+<h1><b><i><u>FINAL PROJECT: ShuffleBot </u></i></b></h1>
+<p class="margin">   </p>
+<h4> For my final project, I combined all the functionalities that I've been working on the past weeks. Therefore, I'm excited to introduce the <b>ShuffleBot</b> -- a machine that simplifies the card playing process and works for all card game lovers! </h4>
+  <p class="margin">   </p>
+<img src="finaldemo2.jpg" alt="Flowers in Chania"  width="500" />
+   <p class="margin">   </p>
+
+<h4> As someone who loves playing card games with friends, I always struggled with one thing -- shuffling. I was awful at it and at the beginning of the program, nobody in my group knew how to shuffle cards. Every game we played was a struggle and took extremely long to begin due to shuffling. Therefore, I wanted to take the situation in my own hands and create an automatic shuffler. I've seen inspiration online, but most machines cost a decent amount so why not make it myself? </h4>
+<p class="margin"></p> <!-- empty margin paragraph -->
+
+<h1><b><i><u>Process</u></i></b></h1>
+<p class="margin"></p> <!-- empty margin paragraph -->
+
+<!-- Function 1 with rounded rectangle -->
+<div style="background-color: #032342; border-radius: 15px; padding: 15px; margin-bottom: 20px;">
+  <h3><b>Function 1: Shuffling</b></h3>
+  <h4>
+    I've been working on the shuffling function for a few weeks now, as seen in 
+    <a href="https://william1li.github.io/Digital-fabrication/05_3Ddesign/index.html">week 5</a> and 
+    <a href="https://william1li.github.io/Digital-fabrication/07_outputs/index.html">week 7</a>. I've been working on my final project idea since the beginning, so now all I had to do was perfect it. In week 7, I struggled with the issue of the cards coming out correctly, so this time I cut out the pieces in wood. In fusion, I also modeled all the pieces perfectly to fit with eachother. 
+  </h4>
+</div>
+
+<!-- Images side-by-side with captions -->
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px; margin-top: 15px;">
+  <div style="flex: 1; min-width: 250px; max-width: 300px;">
+    <img src="lazercutter.jpg" alt="Laser Cutter" style="width: 100%; height: auto;">
+    <h6 style="margin-top: 5px; font-style: italic;">
+      Unfortunately, in the first iteration, I realized that the pieces I cut to hold the cards were too small, so I had to reprint two pieces.
+    </h6>
+  </div>
+  <div style="flex: 1; min-width: 250px; max-width: 300px;">
+    <img src="fusionfirst.png" alt="Fusion Design" style="width: 100%; height: auto;">
+    <h6 style="margin-top: 5px; font-style: italic;">
+      <b>First Fusion prototype:</b>
+      <a href="firstprototype.f3d" download>Download here</a>
+    </h6>
+  </div>
+</div>
+
+<p class="margin"></p>
+  <h4> 
+  I then 3d printed boxes to hold the dc motors which would fit directly under the wood. I printed 3d wheels as well and glued rubber bands to them to create friction for the cards. </h4>
+<p class="margin"></p>
+ <!-- Images/videos side-by-side with captions -->
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px; margin-top: 15px;">
+  <!-- Wheel image -->
+  <div style="flex: 1; min-width: 250px; max-width: 300px;">
+    <img src="firstwheel.jpg" alt="Wheel Assembly" style="width: 100%; height: auto;">
+    <h6 style="margin-top: 5px; font-style: italic;">
+      I used M2 screws to secure the wheels into the DC motor and superglue to ensure they wouldn't slip.
+    </h6>
+  </div>
+
+  <!-- First prototype video -->
+  <div style="flex: 1; min-width: 250px; max-width: 300px;">
+    <video controls style="width: 100%; height: auto;">
+      <source src="firstprotoype.MOV" type="video/quicktime">
+      Your browser does not support the video tag.
+    </video>
+    <h6 style="margin-top: 5px; font-style: italic;">
+      I then assembled everything with M2 wood screws and tested out the functionality for the first time. It worked, so now it was time for testing.
+    </h6>
+  </div>
+</div>
+
+<h3><b><u> Testing </u></b></h3>
+<h4>
+After assembling the base shuffler build, I had to debug some of the issues that came with it. Throughout my testing, I simply connected the red and black wires of the dc motors to GND and 5V of my breadboard. After hours of testing, I was stuck on why the shuffling kept getting stuck. Eventually, I found out that the cards needed some sort of pressure at the front -- otherwise there wasnt enough weight to launch them through the small hole. Combined with increasing the voltage at a voltmeter, I placed erasers on the front of the decks and it worked perfectly. </h4>
+
+<div style="flex: 1; min-width: 250px; max-width: 300px;">
+    <video controls style="width: 100%; height: auto;">
+      <source src="shufflewitheraser.MOV" type="video/quicktime">
+      Your browser does not support the video tag.
+    </video>
+    <h6 style="margin-top: 5px; font-style: italic;">
+      This was the first video I have of the cards fully shuffling -- before they would continously get stuck. Now, it was time to figure out how to design a weight that wasn't erasers...
+    </h6>
+</div>
+
+<p class="margin"></p>
+
+<h4>
+  I was able to figure this function out due to some research on YouTube, especially this 
+  <b><a href="https://youtu.be/9TeUHlfm-Wo?si=lZoJ52mnQFu9CAkf" target="_blank">video</a></b>. 
+  I studied specifically how they managed to get the cards to move smoothly. This is where I learned I needed more voltage.
+</h4>
+
+<p class="margin"></p>
+
+<!-- Function 2 with rounded rectangle -->
+<div style="background-color: #032342; border-radius: 15px; padding: 15px; margin-bottom: 20px;">
+  <h3><b>Function 2: Distribution</b></h3>
+  <h4>Distribution was the hardest aspect of my project. I had multiple ideas, watching multiple youtube videos on how others distributed:</h4>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px; margin-top: 15px;">
+  
+  <!-- Option 1 -->
+  <div style="flex: 1; min-width: 250px; max-width: 300px; border: 2px solid #ccc; border-radius: 15px; padding: 10px; background-color: #61aeed;">
+    <img src="option1.png" alt="Option 1" style="width: 100%; height: auto; border-radius: 10px;">
+    <h6 style="margin-top: 5px; font-style: italic;">
+      <span style="font-size: 1.1em; font-weight: bold;">Option 1:</span> 
+      I wanted to use this mechanism but realized there would be no way for all the cards to fall because of the extruding part.
+      <br>
+      <a href="https://youtu.be/dx9-wwSQbUE?si=hIrpndXGozAZEG-m" target="_blank">Link</a>
+    </h6>
+  </div>
+
+  <!-- Option 2 -->
+  <div style="flex: 1; min-width: 250px; max-width: 300px; border: 2px solid #ccc; border-radius: 15px; padding: 10px; background-color: #61aeed;">
+    <img src="option2.png" alt="Option 2" style="width: 100%; height: auto; border-radius: 10px;">
+    <h6 style="margin-top: 5px; font-style: italic;">
+      <span style="font-size: 1.1em; font-weight: bold;">Option 2:</span> 
+      There was simply not enough space in the center area for all the cards to land perfectly while having this mechanism at the same time.
+      <br>
+      <a href="https://www.youtube.com/watch?v=QR7SSsZZJlM" target="_blank">Link</a>
+    </h6>
+  </div>
+
+  <!-- Option 3 -->
+  <div style="flex: 1; min-width: 250px; max-width: 300px; border: 2px solid #ccc; border-radius: 15px; padding: 10px; background-color: #61aeed;">
+    <img src="option3.png" alt="Option 3" style="width: 100%; height: auto; border-radius: 10px;">
+    <h6 style="margin-top: 5px; font-style: italic;">
+      <span style="font-size: 1.1em; font-weight: bold;">Option 3:</span> 
+      This had the same problem as the first one: how would the shuffled cards land with the extruding part?
+      <br>
+      <a href="https://www.reddit.com/r/functionalprint/comments/1kjwwc7/i_made_a_diy_automatic_card_dealer/" target="_blank">Link</a>
+    </h6>
+  </div>
+</div>
+
+
+<p class="margin"></p>
+<h4> After lots of consideration and blueprinting, I decided to combine these options into one that would fit my design. First, I realized the 3d printed card holder box I originally prototyped wasn't tall enough to hold all the cards, so I laser cutted a new box (simply 6 sides): </h4>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px; margin-top: 15px;">
+  <!-- Wheel image -->
+  <div style="flex: 1; min-width: 250px; max-width: 300px;">
+    <img src="wheel+box.jpg" alt="Wheel Assembly" style="width: 100%; height: auto;">
+    <h6 style="margin-top: 5px; font-style: italic;">
+      I 3d printed a gear box and attatched wheels to the dc motor. I then glued the gearbox onto the bottom of the card holder box. The wheels go through the bottom of the box because of two cut out holes, just enough to touch the cards and propel them outwards.
+    </h6>
+  </div>
+
+<h4> Now, it was time for testing. I first wanted to determine the pressure needed for the cards to go through. I added a piece in the front of the box that allowed just enough space for two cards to go through. The main goal was also to make contact with the rubber bands on the wheel to launch the cards out.
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px; margin-top: 15px;">
+  <!-- Wheel image -->
+  <div style="flex: 1; min-width: 250px; max-width: 300px;">
+    <img src="cardholder.jpg" alt="Wheel Assembly" style="width: 100%; height: auto;">
+    <h6 style="margin-top: 5px; font-style: italic;">
+      I grabbed some pieces of dense metal to test the pressure required for the cards to propel through.
+    </h6>
+  </div>
+    </div>
+
+<!-- START: 6-Box Video Grid Section -->
+<h3><b><u> Testing </u></b></h3>
+
+<div class="video-grid" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 15px;">
+
+  <div class="video-box" style="flex: 1 1 calc(33.33% - 20px); min-width: 250px; max-width: 350px; background-color: #61aeed; border: 2px solid #ccc; border-radius: 15px; padding: 15px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center;">
+    <h5 style="color: white; margin-bottom: 10px; font-weight: bold;">Iteration 1</h5>
+    <video controls style="width: 100%; border-radius: 10px; margin-bottom: 8px;">
+      <source src="cardd1.MOV" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h6 style="color: white; font-style: italic; text-align: center; margin: 0;">This was my first concept of testing. I simply used my finger to see how much weight was needed and if it was possible for the cards to go through the small hole.</h6>
+  </div>
+
+  <div class="video-box" style="flex: 1 1 calc(33.33% - 20px); min-width: 250px; max-width: 350px; background-color: #61aeed; border: 2px solid #ccc; border-radius: 15px; padding: 15px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center;">
+  <h5 style="color: white; margin-bottom: 10px; font-weight: bold;">Iteration 2</h5>
+  
+  <!-- Aspect ratio container for 9:16 -->
+  <div style="width: 100%; aspect-ratio: 9 / 16; overflow: hidden; border-radius: 10px; margin-bottom: 8px;">
+    <video controls style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <source src="cardd2.MOV" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+  <h6 style="color: white; font-style: italic; text-align: center; margin: 0;">
+    This is when I first figured out the strength and placement necessary for the cards to come out <b> smoothly.</b>
+  </h6>
+</div>
+
+
+  <div class="video-box" style="flex: 1 1 calc(33.33% - 20px); min-width: 250px; max-width: 350px; background-color: #61aeed; border: 2px solid #ccc; border-radius: 15px; padding: 15px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center;">
+    <h5 style="color: white; margin-bottom: 10px; font-weight: bold;">Iteration 3</h5>
+    <video controls style="width: 100%; border-radius: 10px; margin-bottom: 8px;">
+      <source src="" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h6 style="color: white; font-style: italic; text-align: center; margin: 0;">This is when I came up with the idea of using magnets: I thought if I put one magnet on the cards and one below, it would provide the perfect amount of pressure. Unfortunately, this idea failed because at the end of the deck, the magnetic force would become too strong and trap the cards.</h6>
+  </div>
+
+  <div class="video-box" style="flex: 1 1 calc(33.33% - 20px); min-width: 250px; max-width: 350px; background-color: #61aeed; border: 2px solid #ccc; border-radius: 15px; padding: 15px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center;">
+    <h5 style="color: white; margin-bottom: 10px; font-weight: bold;">Iteration 4</h5>
+    <video controls style="width: 100%; border-radius: 10px; margin-bottom: 8px;">
+      <source src="cardd4.MOV" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h6 style="color: white; font-style: italic; text-align: center; margin: 0;">I decided to switch over to a simple weight for the next iteration. While it didn't work as great as the magnets, it sufficied and was able to get through the entire deck.</h6>
+  </div>
+
+  <div class="video-box" style="flex: 1 1 calc(33.33% - 20px); min-width: 250px; max-width: 350px; background-color: #61aeed; border: 2px solid #ccc; border-radius: 15px; padding: 15px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center;">
+    <h5 style="color: white; margin-bottom: 10px; font-weight: bold;">Iteration 5</h5>
+    <video controls style="width: 100%; border-radius: 10px; margin-bottom: 8px;">
+      <source src="cardd5.MOV" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h6 style="color: white; font-style: italic; text-align: center; margin: 0;">I decided to cut out a small piece of wood and recut the backing of my machine. Therefore, I created a lever-type (attatched by masking tape for flexibility) of function that would only drop down when the cards finished shuffling, eliminating the issue of space. Unfortunately, it didn't work too well the first time and I needed some adjustments. </h6>
+  </div>
+
+  <div class="video-box" style="flex: 1 1 calc(33.33% - 20px); min-width: 250px; max-width: 350px; background-color: #61aeed; border: 2px solid #ccc; border-radius: 15px; padding: 15px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center;">
+    <h5 style="color: white; margin-bottom: 10px; font-weight: bold;">Iteration 6</h5>
+    <video controls style="width: 100%; border-radius: 10px; margin-bottom: 8px;">
+      <source src="cardd6.MOV" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h6 style="color: white; font-style: italic; text-align: center; margin: 0;">After adjustments with the spacing and weight distribution, I was able to get it to launch out one to two cards each time.</h6>
+  </div>
+
+</div>
+<!-- END: 6-Box Video Grid Section -->
+<h4> Overall, while I originally wanted the cards to launch out fully, having a dispenser-type function worked just as well. Also, i was happy with the 2 card limit that I implemented and measured. Card distribution took a long time and in the future, I can see myself attempting a different design.</h4>
+
+
+<!-- Function 1 with rounded rectangle -->
+<div style="background-color: #032342; border-radius: 15px; padding: 15px; margin-bottom: 20px;">
+  <h3><b>Function 3: Spinning</b></h3>
+  <h4>
+    One of my main goals for this project was to try making the entire project spin. I thought it would be cool if the project could turn to each player. Unfortunately, due to time constraints and multiple issues, I was unable to get it to work. Regardless, I'm still happy with the product. 
+  </h4>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px; margin-top: 15px;">
+  <!-- Wheel image -->
+  <div style="flex: 1; min-width: 250px; max-width: 300px;">
+    <img src="spinning.jpg" alt="Wheel Assembly" style="width: 100%; height: auto;">
+    <h6 style="margin-top: 5px; font-style: italic;">
+      I first 3d printed this part to connect the entire structure to a stepper motor.
+    </h6>
+      <h6 style="margin-top: 5px; font-style: italic;">
+      <a href="box.f3d" download>Download here</a>
+    </h6>
+  </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px; margin-top: 15px;">
+  <!-- Wheel image -->
+  <div style="flex: 1; min-width: 250px; max-width: 300px;">
+    <img src="spinningbroken.jpg" alt="Wheel Assembly" style="width: 100%; height: auto;">
+    <h6 style="margin-top: 5px; font-style: italic;">
+      Unfortunately, after hours of testing and wiring, the stepper would not work. In this picture, you can see I connected the part to the stepper, but there was an extreme amount of interference. Everytime I even hovered my finger over the microcontroller, the stepper would begin moving on its own. Overall, it was impossible to code the stepper due to the massive interference, so I decided to focus on the other functions instead. 
+    </h6>
+  </div>
+    </div>
+     </div>
+<p class="margin"></p> <!-- empty margin paragraph -->
+
+<h1><b><i><u>Final Integration</u></i></b></h1>
+<p class="margin"></p>
+
+<h4>After I got each individual part working, I began wiring everything together. Assembling was easy because I designed each part to fit together perfectly in fusion. I ran into multiple issues in wiring, however.</h4>
+
+<!-- Issue 1 + Fix 1 -->
+<div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+  
+  <!-- Issue 1 -->
+  <div class="video-box" style="flex: 1 1 300px; background-color: #ff6b6b; border: 2px solid #ccc; border-radius: 15px; padding: 15px; display: flex; flex-direction: column; align-items: center;">
+    <h5 style="color: white; margin-bottom: 10px; font-weight: bold;">Issue 1</h5>
+    <video controls style="width: 100%; border-radius: 10px; margin-bottom: 8px;">
+      <source src="firstwiring.MOV" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h6 style="color: white; font-style: italic; text-align: center; margin: 0;">
+      I hooked up the DC motors to L9110s and then to my microcontroller, but I quickly noticed there was not nearly enough voltage. The L9110s also kept getting extremely hot, and the wheels were not fast enough to push the cards through.
+    </h6>
+  </div>
+
+  <!-- Fix 1 -->
+  <div class="video-box" style="flex: 1 1 300px; background-color: #4caf50; border: 2px solid #ccc; border-radius: 15px; padding: 15px; display: flex; flex-direction: column; align-items: center;">
+    <h5 style="color: white; margin-bottom: 10px; font-weight: bold;">Fix 1</h5>
+    <video controls style="width: 100%; border-radius: 10px; margin-bottom: 8px;">
+      <source src="9volts.MOV" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h6 style="color: white; font-style: italic; text-align: center; margin: 0;">
+     I connected the entire structure to 9V connection, which essentially eliminated all former issues I had. It allowed both the shuffling and distributing to work better.
+    </h6>
+  </div>
+
+</div>
+
+<!-- Issue 2 + Fix 2 -->
+<div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+  
+  <!-- Issue 2 -->
+  <div class="video-box" style="flex: 1 1 300px; background-color: #ff6b6b; border: 2px solid #ccc; border-radius: 15px; padding: 15px; display: flex; flex-direction: column; align-items: center;">
+    <h5 style="color: white; margin-bottom: 10px; font-weight: bold;">Issue 2</h5>
+    <video controls style="width: 100%; border-radius: 10px; margin-bottom: 8px;">
+      <source src="secondwiring.MOV" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h6 style="color: white; font-style: italic; text-align: center; margin: 0;">
+      I connected the three motors to two different buttons for shuffling and distributing, but there was a huge delay in activation every time I pressed them. Download the entire code for my project here: 
+    </h6>
+  </div>
+
+ <!-- Fix 2 -->
+<div class="video-box" style="flex: 1 1 300px; background-color: #4caf50; border: 2px solid #ccc; border-radius: 15px; padding: 15px; display: flex; flex-direction: column; align-items: center;">
+  <h5 style="color: white; margin-bottom: 10px; font-weight: bold;">Fix 2</h5>
+  <video controls style="width: 100%; border-radius: 10px; margin-bottom: 8px;">
+    <source src="appvideo.mov" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <h6 style="color: white; font-style: italic; text-align: center; margin: 0;">
+    I connected the three motors to the microcontroller but instead of using buttons, I decided to switch over to wireless connection instead. 
+    Therefore, I made a website that could control the shuffling, distribution, etc. 
+    <a href="Untitled document.pdf" target="_blank" rel="noopener noreferrer" style="color: #fff; text-decoration: underline; font-weight: bold;">
+      Download the entire code for my project here
+    </a>
+  </h6>
+</div>
+
+
+</div>
+<h4> After combining all these functions, I was able to get the project to work! The shuffling worked wonderfully as well as the distribution, and I was officially done. </h4>
+  <div style="flex: 1; min-width: 250px; max-width: 300px;">
+    <video controls style="width: 100%; height: auto;">
+      <source src="fullworking.MOV" type="video/quicktime">
+      Your browser does not support the video tag.
+    </video>
+    <h6 style="margin-top: 5px; font-style: italic;">
+      Here's a timelapse
+    </h6>
+  </div>
+
+<p class="margin"></p>
+<h1><b><i><u>What's next?</u></i></b></h1>
+<h4> For future improvements, I definitley want to use a stepper to get the project to spin. I will continue making iterations of the project, including making packaging for the wiring! I have many ideas to come, and since I brought my project home, i will continue working on it until I perfect it and create the features I want. Some other features include a oled screen that displays players, a method to shoot out the cards fully, and entirely making structure smaller. <b> If I were to do this project differently, </b>I would definitley distribute my timing better. Unfortunately, during most of the process, I was extremely sick so I was unable to work on it to the best of my ability. Therefore, next time I hope to manage my time better, but overall I am happy with the final product. </h4>
+
+</div>
+</xmp>
+</body>
+
+<script src="../strapdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+
+</html>
